@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "lbx1bgj",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="primary-header">
+        <a href="#" class="logo">
+          <img src="./images/DES3D-dark-p2.svg" alt="" />
+        </a>
+        <div class="nav-wrapper">
+          <nav>
+            <ul role="list" id="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#" class="active">Product</a></li>
+              <li><a href="#">Criteria</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="search-icon" id="nav-search">
+            <i>
+              <svg
+                id="Group_9871"
+                data-name="Group 9871"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26.256"
+                height="26.255"
+                viewBox="0 0 26.256 26.255"
+              >
+                <path
+                  id="Path_2920"
+                  data-name="Path 2920"
+                  d="M23.317,23.316a1.641,1.641,0,0,1,2.322,0l6.317,6.317a1.641,1.641,0,0,1-2.32,2.322l-6.317-6.317a1.641,1.641,0,0,1,0-2.322Z"
+                  transform="translate(-6.182 -6.181)"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="Path_2921"
+                  data-name="Path 2921"
+                  d="M10.666,19.691a9.025,9.025,0,1,0-9.025-9.025A9.025,9.025,0,0,0,10.666,19.691Zm10.666-9.025A10.666,10.666,0,1,1,10.666,0,10.666,10.666,0,0,1,21.332,10.666Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </i>
+            <input type="text" placeholder="searching for..." />
+          </div>
+          <!-- <div class="search-bar">
+            <input type="text" id="search" />
+            <button class="search-icon">
+              <img src="./images/search-icon.svg" alt="search-icon" />
+            </button>
+          </div> -->
+          <button class="btn login-btn">Login</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="page-title">
+          <h1>3D Products</h1>
+          <ul role="list" class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">3D Products</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <aside>
+            <div class="categories">
+              <div class="categories-title">
+                <h3>Categories</h3>
+                <i class="fa-solid fa-minus" id="categories-toggle"></i>
+              </div>
+              <div class="accordion">
+                <div id="category-accordion">
+                  <div class="search-bar" id="category-search">
+                    <i>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26.256"
+                        height="26.255"
+                        viewBox="0 0 26.256 26.255"
+                      >
+                        <g
+                          id="Group_9881"
+                          data-name="Group 9881"
+                          transform="translate(0 0)"
+                        >
+                          <path
+                            id="Path_2920"
+                            data-name="Path 2920"
+                            d="M23.317,23.316a1.641,1.641,0,0,1,2.322,0l6.317,6.317a1.641,1.641,0,0,1-2.32,2.322l-6.317-6.317a1.641,1.641,0,0,1,0-2.322Z"
+                            transform="translate(-6.182 -6.181)"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            id="Path_2921"
+                            data-name="Path 2921"
+                            d="M10.666,19.691a9.025,9.025,0,1,0-9.025-9.025A9.025,9.025,0,0,0,10.666,19.691Zm10.666-9.025A10.666,10.666,0,1,1,10.666,0,10.666,10.666,0,0,1,21.332,10.666Z"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </i>
+                    <input type="text" placeholder="searching for..." />
+                  </div>
+                  <div class="category-list">
+                    <p><span>Cycling Jersey</span><span>2</span></p>
+                    <p class="active"><span>Jersey</span><span>48</span></p>
+                    <p><span>Helmet</span><span>14</span></p>
+                    <p><span>Gloves</span><span>15</span></p>
+                    <p><span>Bibs</span><span>23</span></p>
+                    <p><span>Cycling Shoes</span><span>1</span></p>
+                    <p><span>Helmet</span><span>14</span></p>
+                    <p><span>Gloves</span><span>15</span></p>
+                    <p><span>Bibs</span><span>23</span></p>
+                    <p><span>Cycling Shoes</span><span>1</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="brands">
+              <div class="brands-title">
+                <h3>Brands</h3>
+                <i class="fa-solid fa-minus" id="brands-toggle"></i>
+              </div>
+              <div class="accordion">
+                <div id="brand-accordion">
+                  <div class="search-bar" id="brand-search">
+                    <i>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26.256"
+                        height="26.255"
+                        viewBox="0 0 26.256 26.255"
+                      >
+                        <g
+                          id="Group_9881"
+                          data-name="Group 9881"
+                          transform="translate(0 0)"
+                        >
+                          <path
+                            id="Path_2920"
+                            data-name="Path 2920"
+                            d="M23.317,23.316a1.641,1.641,0,0,1,2.322,0l6.317,6.317a1.641,1.641,0,0,1-2.32,2.322l-6.317-6.317a1.641,1.641,0,0,1,0-2.322Z"
+                            transform="translate(-6.182 -6.181)"
+                            fill-rule="evenodd"
+                          />
+                          <path
+                            id="Path_2921"
+                            data-name="Path 2921"
+                            d="M10.666,19.691a9.025,9.025,0,1,0-9.025-9.025A9.025,9.025,0,0,0,10.666,19.691Zm10.666-9.025A10.666,10.666,0,1,1,10.666,0,10.666,10.666,0,0,1,21.332,10.666Z"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </i>
+                    <input type="text" placeholder="searching for..." />
+                  </div>
+                  <div class="brand-list">
+                    <p><span>The Big Ring</span><span>2</span></p>
+                    <p class="active"><span>Cycology</span><span>48</span></p>
+                    <p><span>Foodbank</span><span>14</span></p>
+                    <p><span>Adidas</span><span>15</span></p>
+                    <p><span>Nike</span><span>23</span></p>
+                    <p><span>Apex</span><span>1</span></p>
+                    <p><span>Jordan</span><span>14</span></p>
+                    <p><span>Puma</span><span>15</span></p>
+                    <p><span>H&M</span><span>23</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <div class="products">
+            <div class="summary">
+              <p>Showing 12 of 563 results</p>
+              <div class="sorting">
+                <div class="sorting-list">
+                  <select id="sorting-method">
+                    <option value="default">Default Sorting</option>
+                    <option value="text1">Text1</option>
+                    <option value="text2">Text2</option>
+                  </select>
+                  <span class="custom-arrow"
+                    ><i class="fa-solid fa-angle-down"></i
+                  ></span>
+                </div>
+                <i class="fa-solid fa-bars sort-by-1"></i>
+                <i class="fa-solid fa-bars sort-by-2"></i>
+              </div>
+            </div>
+            <div class="product-list" id="product-list">
+              <!-- <div class="product-card">
+                <div class="product-card-content">
+                  <div class="product-img">
+                    <img
+                      src="./images/MicrosoftTeams-image__7_-removebg.png"
+                      alt="product-img"
+                    />
+                    <button class="btn config-btn">Configure</button>
+                  </div>
+                  <h2 class="product-title">Jersey 1001</h2>
+                  <p class="product-details">The Big Ring</p>
+                </div>
+              </div> -->
+            </div>
+
+            <button class="btn load-btn">Load More</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-info">
+          <a href="#">
+            <img src="./images/DES3D-dark-p2.svg" alt="" />
+          </a>
+          <p class="bio">
+            Bringing futuristic 4IR inspired next generation technologies in
+            your hand.
+          </p>
+
+          <div class="social-media">
+            <ul role="list">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" class="active"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/instagram.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="useful-links">
+          <h2>Useful Links</h2>
+          <ul role="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="help-links">
+          <h2>Help?</h2>
+          <ul role="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="address">
+          <h2>Address</h2>
+          <p>OXMAM GROUP PTY</p>
+          <p>desf@oxman-group.com</p>
+          <p>13 BAMBRA ROAD CAULFIELD NORTH</p>
+          <p>VIC 3161 AUSTRALIA</p>
+          <p>PH 61 418379502</p>
+        </div>
+      </div>
+      <div class="copyright-wrapper">
+        <div class="copyright">
+          <small>&copy; Copyright 2022, des3d.com</small>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/6756dd734e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
