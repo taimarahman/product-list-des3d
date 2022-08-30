@@ -460,7 +460,7 @@ select.decorated option:hover {
   transform: rotate(90deg);
 }
 
-.sorting > i:focus {
+.sorting i.onclick {
   background-color: var(--clr-theme);
   color: #fff;
 }

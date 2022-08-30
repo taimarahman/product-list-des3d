@@ -11,6 +11,9 @@ const brandAccordion = document.getElementById("brand-accordion");
 const categorySearchToggle = document.getElementById("category-search");
 const brandSearchToggle = document.getElementById("brand-search");
 
+const sortBy1 = document.getElementById("sort-by-1");
+const sortBy2 = document.getElementById("sort-by-2");
+
 async function getAllProducts() {
   const res = await fetch("./productList.json");
 
@@ -93,4 +96,14 @@ categorySearchToggle.addEventListener("click", () => {
 brandSearchToggle.addEventListener("click", () => {
   brandSearchToggle.classList.toggle("focus");
   toggleSearch(brandSearchToggle, "Jersey");
+});
+
+sortBy1.addEventListener("click", () => {
+  sortBy1.classList.toggle("onclick");
+  console.log("fuck");
+});
+
+sortBy2.addEventListener("click", () => {
+  sortBy2.classList.toggle("onclick");
+  console.log("fuck");
 });
