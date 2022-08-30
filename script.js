@@ -100,10 +100,8 @@ brandSearchToggle.addEventListener("click", () => {
 
 sortBy1.addEventListener("click", () => {
   sortBy1.classList.toggle("onclick");
-  console.log("fuck");
 });
 
 sortBy2.addEventListener("click", () => {
   sortBy2.classList.toggle("onclick");
-  console.log("fuck");
 });
