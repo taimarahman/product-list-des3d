@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&family=Poppins:wght@400;500&display=swap");
+
+// color codes
+$clr-theme: #4ad679;
+$clr-primary-blue: #14395b;
+$clr-bluish-grey: #22262a;
+$clr-dark-grey: #262626;
+$clr-light-grey: #f2f2f2;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+// custom styles
+body {
+  font-family: noto-sans-cjk-kr, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: $clr-primary-blue;
+}
+
+// shadow mixin
+
+@mixin input-shadow {
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+  -webkit-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+  -moz-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+}
+
+@mixin button-shadow {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* Header navigation */
+
+.primary-header {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  // gap: 9rem;
+  width: 100%;
+  height: 6.5rem;
+  padding: 0 80px;
+
+  .logo {
+    max-width: 15.25rem;
+    max-height: 3.75rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  nav ul {
+    width: 910px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      a {
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        font-size: 1.125rem;
+        color: $clr-primary-blue;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 3px;
+          border-radius: 1rem;
+          background-color: $clr-theme;
+          left: 0;
+          bottom: -0.5rem;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.5s ease;
+        }
+        &.active {
+          color: $clr-theme;
+        }
+
+        &.active::after {
+          transform: scaleX(1);
+        }
+      }
+      &:hover a {
+        color: $clr-theme;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  .login-btn {
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 3.5rem;
+    background-color: $clr-theme;
+    color: #fff;
+
+    &:hover {
+      @include button-shadow;
+    }
+  }
+
+  .search-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    position: relative;
+    margin: 0 2rem;
+    padding: 1rem 0;
+    width: 11rem;
+    border-radius: 0.825rem;
+
+    input {
+      border: none;
+      background-color: transparent;
+      align-self: flex-end;
+      outline: none;
+      width: 100%;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      font-size: 1.125rem;
+      opacity: 0;
+      margin-left: 2.125rem;
+      transition: opacity 0.2s ease-in;
+    }
+    i {
+      position: absolute;
+      transform: translateX(9rem);
+      font-size: 1.75rem;
+      border: none;
+      padding-left: 0.25rem;
+      background-color: transparent;
+      transition: transform 0.5s ease;
+
+      svg path {
+        fill: var(--clr-primary-blue);
+      }
+    }
+
+    &.show {
+      border: 1px solid var(--clr-theme);
+      @include input-shadow;
+
+      i {
+        transform: translateX(0);
+        font-size: 0.5rem;
+      }
+
+      input {
+        opacity: 1;
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .primary-header {
+    .logo {
+      max-width: 15.25rem;
+      max-height: 3.75rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    nav ul li a {
+      font-size: 1.25rem;
+    }
+  }
+}

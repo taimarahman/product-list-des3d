@@ -162,18 +162,21 @@ nav ul li a.active::after {
   margin: 0 2rem;
   padding: 1rem 0;
   width: 11rem;
+  border-radius: 0.825rem;
 }
-
 .search-icon input {
   border: none;
+  background-color: transparent;
   align-self: flex-end;
   outline: none;
   width: 100%;
   height: 1.75rem;
+  line-height: 1.75rem;
+  font-size: 1.125rem;
   opacity: 0;
-  margin-left: 2rem;
+  margin-left: 2.125rem;
+  transition: opacity 0.2s ease-in;
 }
-
 .search-icon i {
   position: absolute;
   transform: translateX(9rem);
@@ -183,25 +186,19 @@ nav ul li a.active::after {
   background-color: transparent;
   transition: transform 0.5s ease;
 }
-
 .search-icon i svg path {
   fill: var(--clr-primary-blue);
 }
-
-.search-icon.show i svg path {
-  fill: var(--clr-theme);
+.search-icon.show {
+  border: 1px solid var(--clr-theme);
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.1647058824) inset;
+  -webkit-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.1647058824) inset;
+  -moz-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.1647058824) inset;
 }
-
 .search-icon.show i {
   transform: translateX(0);
   font-size: 0.5rem;
 }
-
-.search-icon.show {
-  border: 1px solid var(--clr-theme);
-  border-radius: 1.125rem;
-}
-
 .search-icon.show input {
   opacity: 1;
   outline: none;

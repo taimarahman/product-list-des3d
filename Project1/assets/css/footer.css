@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&family=Poppins:wght@400;500&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+body {
+  font-family: noto-sans-cjk-kr, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: #14395b;
+}
+
+/* footer */
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  color: #fff;
+  font-size: 0.825rem;
+  line-height: 2.5rem;
+  background-color: #14395b;
+  padding: 2.75rem 0 2.5rem;
+}
+.footer-wrapper .footer-info {
+  grid-column: 2/span 1;
+  letter-spacing: 0.5px;
+}
+.footer-wrapper .footer-info .bio {
+  margin: 2.25rem 2.5rem 2.75rem 0;
+}
+.footer-wrapper .footer-info .social-media ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.footer-wrapper .footer-info .social-media ul li a {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  border-radius: 50%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #94b7db;
+  font-size: 1.5em;
+  margin: 0 0.625rem;
+}
+.footer-wrapper .footer-info .social-media ul li a.active {
+  color: #4ad679;
+}
+.footer-wrapper .footer-info .social-media ul li a:first-child {
+  margin-left: 0;
+}
+.footer-wrapper div:not(:first-child) h2 {
+  font-size: 1.125rem;
+  line-height: 3.5rem;
+  margin-bottom: 1rem;
+}
+.footer-wrapper .useful-links {
+  margin-left: 8rem;
+}
+.footer-wrapper .useful-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-wrapper .help-links {
+  margin-left: 3rem;
+}
+.footer-wrapper .help-links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.copyright-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  color: #fff;
+  font-size: 0.825rem;
+  line-height: 2.5rem;
+  background-color: #0b2f50;
+  padding: 1.75rem 0;
+}
+.copyright-wrapper .copyright {
+  grid-column: 2/span 4;
+}/*# sourceMappingURL=footer.css.map */

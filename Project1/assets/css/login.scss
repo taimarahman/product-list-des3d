@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+$green: #4ad679;
+$blue: #14395b;
+$grey: #7e7e7e;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/*  Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+///////
+
+body {
+  font-family: noto-sans-cjk-kr, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $blue;
+  width: 100%;
+  height: 100vh;
+  //   overflow: hidden;
+}
+
+// shadow mixin
+
+@mixin input-shadow {
+  box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+  -webkit-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+  -moz-box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.12) inset;
+}
+
+@mixin button-shadow {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  gap: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-color: $green;
+}
+
+.panel-container {
+  //   background-color: $green;
+  height: 100%;
+  padding: 6rem 0 0 6rem;
+  position: relative;
+
+  .logo-cube {
+    width: 6rem;
+    height: 7rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content {
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+    color: #fff;
+    margin: 2rem 0;
+  }
+  .panel-image {
+    position: absolute;
+    z-index: 2;
+    width: 85%;
+    bottom: -6%;
+    right: -20%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .forgot-password {
+    bottom: 3%;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border-radius: 3.75rem 0 0 3.75rem;
+  height: 100%;
+  padding: 6rem 6rem 0 0;
+  background-color: #fff;
+
+  .logo-primary {
+    width: 219px;
+    height: 33px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: min(15%, 4rem);
+    text-align: right;
+
+    .title {
+      font-size: 2.25rem;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-bottom: 2.5rem;
+      margin-left: 2rem;
+    }
+
+    .instruction {
+      //for forgot password
+      font-size: 0.875rem;
+      color: $grey;
+      margin-bottom: 1rem;
+    }
+
+    .input-field {
+      width: 90%;
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+      border-radius: 0.625rem;
+      @include input-shadow();
+
+      input {
+        display: inline-block;
+        color: $blue;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 3.25rem;
+        line-height: 3.25rem;
+        background-color: transparent;
+        padding: 0 1.875rem;
+        font-size: 1.125rem;
+      }
+    }
+
+    .btn {
+      font-family: noto-sans-cjk-kr, sans-serif;
+      font-size: 1.25rem;
+      background-color: $green;
+      border: none;
+      border-radius: 0.625rem;
+      outline: none;
+      color: #fff;
+      padding: 0.875rem 4.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+
+      a {
+        color: $green;
+
+        &.link1 {
+          margin-right: 0.5rem;
+        }
+        &.link2 {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  form.signup-form {
+    .input-field {
+      width: 80%;
+      margin-bottom: 1.25rem;
+      input {
+        height: 3rem;
+        line-height: 3rem;
+      }
+    }
+    .signup {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      width: 80%;
+
+      .input-field {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// media query for responsive design
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .panel-container {
+    padding: 5rem 0 0 5rem;
+
+    .content {
+      font-size: 1.5rem;
+    }
+    .panel-image {
+      width: 100%;
+      right: -25%;
+    }
+  }
+
+  .form-container {
+    padding: 5rem 5rem 0 0;
+
+    .logo-primary {
+      width: 200px;
+      height: 28px;
+    }
+
+    form {
+      margin-top: min(10%, 3.5rem);
+
+      .title {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .instruction {
+        //for forgot password
+        font-size: 0.75rem;
+      }
+
+      .input-field {
+        width: 75%;
+        margin-bottom: 1rem;
+        input {
+          font-size: 1rem;
+          height: 3rem;
+          line-height: 3rem;
+        }
+      }
+
+      .signup {
+        width: 75%;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 0.75rem 3.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    form.signup-form {
+      .input-field {
+        margin-bottom: 1rem;
+        input {
+          height: 2.875rem;
+          line-height: 2.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    grid-template-columns: 1.2fr 2fr;
+  }
+
+  .panel-container {
+    padding: 8rem 0 0 8rem;
+
+    .content {
+      font-size: 2rem;
+      margin: 2.5rem 0;
+    }
+    .panel-image {
+      width: 105%;
+      bottom: -6%;
+      right: -25%;
+    }
+  }
+
+  .form-container {
+    padding: 8rem 8rem 0 0;
+
+    form {
+      .title {
+        font-size: 3rem;
+        margin-bottom: 3.125rem;
+      }
+
+      .instruction {
+        //for forgot password
+        font-size: 1.25rem;
+      }
+
+      .input-field {
+        width: 90%;
+        margin-bottom: 1.75rem;
+        input {
+          font-size: 1.375rem;
+          height: 4.5rem;
+          line-height: 4.5rem;
+        }
+      }
+
+      .signup {
+        width: 90%;
+      }
+
+      .btn {
+        font-size: 1.375rem;
+        padding: 1.25rem 4.875rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

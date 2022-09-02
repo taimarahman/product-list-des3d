@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "lbx1bgj",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel-container">
+        <div class="logo-cube">
+          <img src="./assets/images/DES3D-p1.svg" alt="" />
+        </div>
+        <h3 class="content">We Test & <br />Analyze Until It's Bug Free</h3>
+        <div class="panel-image">
+          <img src="./assets/images/login-signup-vector.svg" alt="" />
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="logo-primary">
+          <img src="./assets/images/DES3D-dark-p2.svg" alt="" />
+        </div>
+        <form action="" class="login-form">
+          <h2 class="title">
+            Explore 4IR Environment <br />With Next Generation Technology
+          </h2>
+          <div class="input-field">
+            <input type="email" placeholder="Your Email" />
+          </div>
+          <div class="input-field">
+            <input type="password" placeholder="Password" />
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p>
+            <a href="#" class="link1">Forgot Password</a> or
+            <a href="#" class="link2">Signup</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
